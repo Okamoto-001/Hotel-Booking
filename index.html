@@ -106,22 +106,55 @@
                 </div>
             </div>
         </div>
-        <div class = "row row-content align-items-center">
-            <div class="col-12 col-sm-6">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <dl class="row">
-                            <dt class="col-6">Started</dt>
-                            <dd class="col-6">3 Feb. 2013</dd>
-                            <dt class="col-6">Major Stake Holder</dt>
-                            <dd class="col-6">HK Fine Foods Inc.</dd>
-                            <dt class="col-6">Last Year's Turnover</dt>
-                            <dd class="col-6">$1,250,375</dd>
-                            <dt class="col-6">Employees</dt>
-                            <dd class="col-6">40</dd>
-                        </dl>
+        <div class="col-12 col-sm-7 row row-content align-items-center">
+            <div class="card">
+                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group row">
+                      <label for="numberOfGuests" class="col-sm-3 col-form-label">Number of Guests</label>
+                      <div class="col-sm-8">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="numberOfGuests" id="number1" value="1">
+                          <label class="form-check-label" for="number1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="numberOfGuests" id="number2" value="2">
+                          <label class="form-check-label" for="number2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="numberOfGuests" id="number3" value="3">
+                          <label class="form-check-label" for="number3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="numberOfGuests" id="number4" value="4">
+                          <label class="form-check-label" for="number3">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="numberOfGuests" id="number5" value="5">
+                          <label class="form-check-label" for="number5">5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="numberOfGuests" id="number6" value="6">
+                          <label class="form-check-label" for="number6">6</label>
+                        </div>
+                      </div>
                     </div>
+                    <div class="form-group row">
+                      <label for="numberOfGuests" class="col-sm-3 col-form-label">Date and Time</label>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Date">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Time">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Reserve</button>
+                  </form>
                 </div>
             </div>
         </div>
@@ -129,7 +162,7 @@
     <footer class = "footer">
         <div>
             <div class = "container">             
-                <div class = "row">
+              <div class = "row">
                 <div class = "col-4 col-sm-2">
                     <h5>Links</h5>
                     <ul class = "list-unstyled">
