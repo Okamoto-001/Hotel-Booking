@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
     <title>Ristorante Con Fusion</title>
 </head>
@@ -134,7 +135,7 @@
                     <dl class="row">
                         <dt class="col-12 col-sm-2 mb-3">Date And Time</dt>
                         <dd class="col-auto d-sm-flex d-block">
-                            <input type="text" name="" id="" class="form-control" placeholder="Date">
+                            <input type="text" name="" id="" class="form-control datepicker" placeholder="Date">
                             <input type="text" name="" id="" class="form-control ml-sm-3" placeholder="Time">
                         </dd>
                     </dl>
@@ -333,6 +334,7 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
     <script>
         $('#mycarousel').carousel({
         interval: 1700
@@ -347,7 +349,9 @@
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $('.datepicker').datepicker();
         });
+        
     </script>
 
 </body>
