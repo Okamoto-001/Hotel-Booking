@@ -53,7 +53,7 @@ body {
     min-height: 300px;
 }
 
-#carouselButtons {
+/* #carouselButtons {
     margin-left: 100px;
     position:absolute;
     bottom: 0px;
@@ -61,4 +61,11 @@ body {
     z-index: 1000;
     background-color:seashell;
     border: 2px solid: blueviolet;
+} */
+
+#carouselButton {
+    /* right:0px; */
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
 }

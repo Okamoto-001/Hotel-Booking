@@ -221,12 +221,12 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>
-                <div id="carouselButtons">
-                    <button id="playButton" type="button" class="btn btn-default btn-xs">
-                        <span class="glyphicon glyphicon-play">paly</span>
-                     </button>
-                    <button id="pauseButton" type="button" class="btn btn-default btn-xs">
-                        <span class="glyphicon glyphicon-pause">pause</span>
+                <div class="btn-group" id="carouselButton">
+                    <button class="btn btn-danger btn-sm" id="carousel-pause">
+                	    <span class="fa fa-pause"></span>
+                    </button>
+                    <button class="btn btn-danger btn-sm" id="carousel-play">
+                	    <span class="fa fa-play"></span>
                     </button>
                 </div>
             </div>
@@ -335,17 +335,17 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
-    <script>
-        $('#mycarousel').carousel({
-        interval: 1700
-        });
-        $('#playButton').click(function () {
-            $('#mycarousel').carousel('cycle');
-        });
-        $('#pauseButton').click(function () {
-            $('#mycarousel').carousel('pause');
-        });
-    </script>
+        <script>
+            $(document).ready(function(){
+                $("#mycarousel").carousel( { interval: 2000} );
+                $("#carousel-pause").click(function(){
+                    $("#mycarousel").carousel('pause');
+                });
+                $("#carousel-play").click(function(){
+                    $("#mycarousel").carousel('cycle');
+                });
+            });
+        </script>    
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
