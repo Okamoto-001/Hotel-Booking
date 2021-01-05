@@ -6,18 +6,35 @@
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* --out-dir='dist/img'",
+    "usemin": "usemin contactus.html -d dist -o dist/contactus.html --htmlmin true",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "cssmin": "^0.4.3",
+    "grunt": "^1.0.2",
+    "grunt-sass": "^2.1.0",
+    "htmlmin": "0.0.7",
+    "imagemin": "^7.0.1",
+    "imagemin-cli": "^6.0.0",
+    "jit-grunt": "^0.10.0",
+    "lite-server": "^2.6.1",
+    "time-grunt": "^1.4.0",
+    "uglify-js": "^3.12.4",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.1",
     "popper.js": "^1.12.9"
   }
 }

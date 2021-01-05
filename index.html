@@ -6,12 +6,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <!-- Bootstrap CSS -->
+        <!--build:CSS CSS/main.css-->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
         <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
+        <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -37,8 +38,9 @@
 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <a href="#" id="login">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
                 </span>
             </div>
         </div>
@@ -81,12 +83,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="reverseTable" role="dialog">
+    <div class="modal fade" id="reserve" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close dismissReserve">&times;</button>
                 </div>
                 <div class="modal-body">
                     <dl class="row">
@@ -140,7 +142,7 @@
                         </dd>
                     </dl>
                     <dl class="row">
-                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                        <dt class="offset-sm-2 mr-3"><button type="button" class="btn btn-secondary offset-2 dismissReserve">Cancel</button></dt>
                         <dt><button class="btn btn-primary">Reserve</button></dt>
                     </dl>
                 </div>
@@ -160,8 +162,9 @@
                 <div class="col-12 col-sm">
                     <img src="img/logo.png" alt="" class="img-fluid">
                 </div>
-                <div class = "col-12 col-sm align-self-center" id="reserveTable">
-                    <a data-toggle="modal" data-target="#reverseTable" class="col-12 btn btn-warning btn-primary" role="button" aria-pressed="true">Rreverse Table</a>
+                <div class="col-12 col-sm align-self-center" id="reserveTable">
+                    <a href="#" class="btn btn-warning col-12">Reserve
+                        Table</a>
                 </div>
             </div>
         </div>
@@ -325,33 +328,13 @@
         </div>
     </footer>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <!-- build:js js/main.js -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
-        <script>
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-        </script>    
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-            $('.datepicker').datepicker();
-            $("#mycarousel").carousel( {interval: 1700} );
-        });
-        
-    </script>
+        <!-- endbuild -->
+        <script src="js/scripts.js"></script>
 
 </body>
 
